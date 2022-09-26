@@ -1,0 +1,92 @@
+body {
+  background-color: darkred;
+}
+body h1, body h2, body h3 {
+  color: white;
+}
+
+#contactform {
+  background-color: #d6bb81;
+}
+#contactform input, #contactform textarea {
+  background-color: #f6ecd5;
+  flex: 2;
+}
+@media (min-width: 0px) {
+  #contactform {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 700px) {
+  #contactform {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 900px) {
+  #contactform {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@media (min-width: 0px) {
+  div {
+    margin: 0.2em;
+  }
+}
+@media (min-width: 700px) {
+  div {
+    margin: 1em;
+  }
+}
+@media (min-width: 900px) {
+  div {
+    margin: 1em;
+  }
+}
+
+@media (min-width: 0px) {
+  label, input, textarea {
+    flex-basis: 100%;
+    width: 85%;
+  }
+}
+@media (min-width: 700px) {
+  label, input, textarea {
+    flex-basis: 45%;
+    margin-left: auto;
+    margin-right: 1em;
+    text-align: right;
+  }
+}
+@media (min-width: 900px) {
+  label, input, textarea {
+    flex-basis: 45%;
+    margin-left: auto;
+    margin-right: 1em;
+    text-align: right;
+  }
+}
+
+input[type=submit] {
+  max-width: 6em;
+  text-align: center;
+}
+@media (min-width: 0px) {
+  input[type=submit] {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
