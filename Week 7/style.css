@@ -1,0 +1,53 @@
+.curtain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.curtain__panel {
+  background: blue;
+  width: 50%; /*takes up half the container */
+  height: 100vh;
+  float: left;
+  position: relative; /*used in conjunction with z-index to put panels in front */
+  z-index: 2; /*puts curtains in front of prize */
+  transition: all 1s ease-out;
+}
+
+.curtain__prize {
+  background: #333;
+  position: absolute; /* prize position in container start */
+  z-index: 1; /*puts prize behind curtains, which have z-index 2 */
+  width: 100%;
+  height: 100%;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+
+input[type=checkbox]:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+}
+
+.curtain__panel--left {
+  transform: translateX(-100%);
+}
+
+.curtain__panel--right {
+  transform: translateX(100%);
+}
